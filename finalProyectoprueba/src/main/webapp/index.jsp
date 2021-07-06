@@ -80,7 +80,7 @@
         <br />
         <input type="submit" value="Login" id="enviar">
         <a href="DatosUsuario.html" id="registrar" >Registrate</a>
-        <span></span>
+        <span style="color: red"><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span>
       </form>
     </div>
   </div>
