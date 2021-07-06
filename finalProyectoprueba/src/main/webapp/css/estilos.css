@@ -48,7 +48,7 @@ i#iconollave{
     height: 30px;
     border-radius: 5px;
 }
-iframe{
+iframe#inicio{
     position: absolute;
     left: 800px;
     top: 230px;
@@ -139,4 +139,9 @@ div#Protectora2{
 }
 div#Protectora3{
 	width:400px;
+}
+iframe#protectoras{
+	position: absolute;
+    left: -800px;
+    top: 230px;
 }

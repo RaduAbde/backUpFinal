@@ -33,22 +33,22 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Login</a>
+              <a class="nav-link active" aria-current="page" href="index.jsp">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Webs Amigas</a>
+              <a class="nav-link" href="websAmigas.html">Webs Amigas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Protectoras</a>
+              <a class="nav-link" href="Protectoras.html">Protectoras</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../html/mascotasEnAdopcion.html">Mascotas En Adopcion</a>
+              <a class="nav-link" href="mascotasEnAdopcion.html">Mascotas En Adopcion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../html/colaboradores.jsp">Colaboradores</a>
+              <a class="nav-link" href="colaboradores.jsp">Colaboradores</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Hazte Colaborador</a>
+              <a class="nav-link" href="HazteColaborador.jsp">Hazte Colaborador</a>
             </li>
 
           </ul>
@@ -86,7 +86,7 @@
   </div>
   <div class="col-md-7">
     <div class="embed-responsive embed-responsive-16by9 mt-0 bt-0">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/85MppyLJHz0" allowfullscreen></iframe>
+      <iframe id="inicio" width="560" height="315" src="https://www.youtube.com/embed/85MppyLJHz0" allowfullscreen></iframe>
     </div>
   </div>
   <footer class="bg-dark padding-max bg-cercle-verd" id="inicio">

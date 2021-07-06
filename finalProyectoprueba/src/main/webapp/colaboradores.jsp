@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
-<%@ page import="com.eoi.servicios.conexion" %>
+<%@ page import="com.eoi.servicios.*" %>
 <%@ page import=" java.sql.*" %>
   <!DOCTYPE html>
   <html lang="en">
@@ -32,23 +32,23 @@
             <div class="collapse navbar-collapse" id="navbarText">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Login</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Webs Amigas</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Protectoras</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../html/mascotasEnAdopcion.html">Mascotas En Adopcion</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Colaboradores</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Hazte Colaborador</a>
-                </li>
+              <a class="nav-link" href="index.jsp">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="websAmigas.html">Webs Amigas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Protectoras.html">Protectoras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mascotasEnAdopcion.html">Mascotas En Adopcion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="colaboradores.jsp">Colaboradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="HazteColaborador.jsp">Hazte Colaborador</a>
+            </li>
 
               </ul>
             </div>

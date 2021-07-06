@@ -32,8 +32,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.jsp">Login</a>
+           <li class="nav-item">
+              <a class="nav-link" href="index.jsp">Login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="websAmigas.html">Webs Amigas</a>
@@ -45,14 +45,11 @@
               <a class="nav-link" href="mascotasEnAdopcion.html">Mascotas En Adopcion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Colaboradores</a>
+              <a class="nav-link" href="colaboradores.jsp">Colaboradores</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="HazteColaborador.jsp">Hazte Colaborador</a>
+              <a class="nav-link active" aria-current="page" href="HazteColaborador.jsp">Hazte Colaborador</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="darAdopcionFormulario.html">Dar en adopcion</a>
-             </li>
 
           </ul>
         </div>
