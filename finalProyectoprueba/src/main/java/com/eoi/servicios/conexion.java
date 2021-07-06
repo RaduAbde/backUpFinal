@@ -9,9 +9,14 @@ public class conexion {
 
     private static conexion instancia;
     private Connection connection;
-    private String url = "https://github.com/MiguelCanoGracia/keep-my-pet/blob/master/KeepMyPet.sql";
-    private String username = "MiguelCanoGracia";
-    private String password = "g61659195";
+    String url = "jdbc:mysql://localhost:3306/miempresa?serverTimezone=UTC";
+    String username = "root";
+	String password = "1234";
+    
+    
+    //private String url = "https://github.com/MiguelCanoGracia/keep-my-pet/blob/master/KeepMyPet.sql";
+    //private String username = "MiguelCanoGracia";
+    //private String password = "g61659195";
 
     private conexion() throws SQLException {
         try {

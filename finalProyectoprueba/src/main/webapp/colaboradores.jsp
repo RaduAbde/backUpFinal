@@ -70,7 +70,7 @@
 
       <%
           Connection con = conexion.getInstance().getConnection();
-          String query="SELECT usuNombre, usuApellido, usuMail, usuTelf FROM usuarios where UsuRol='colaborador'";
+          String query="SELECT usuNombre, usuApellido, usuMail, usuTelf, usuRol FROM usuarios where UsuRol='colab'";
           Statement st= con.createStatement();
       %>
       
@@ -85,6 +85,7 @@
               <th scope="col">Apellidos</th>
               <th scope="col">Email</th>
               <th scope="col">Telefono</th>
+              <th scope="col">Rol</th>
             </tr>
           </thead>
           <tbody>
@@ -101,6 +102,9 @@
                 </td>
                 <td>
                   <% out.print(rs.getInt(4)); %>
+                </td>
+                <td>
+                  <% out.print(rs.getString(5)); %>
                 </td>
               </tr>
               <% } %>
