@@ -41,7 +41,7 @@
               <a class="nav-link" href="Protectoras.html">Protectoras</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="mascotasEnAdopcion.html">Mascotas En Adopcion</a>
+              <a class="nav-link" href="mascotasEnAdopcion.jsp">Mascotas En Adopcion</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="colaboradores.jsp">Colaboradores</a>
@@ -70,7 +70,7 @@
 
       <%
           Connection con = conexion.getInstance().getConnection();
-          String query="SELECT usuNombre, usuApellido, usuMail, usuTelf, usuRol FROM usuarios where UsuRol='colab'";
+          String query="SELECT usuNombre, usuApellido, usuMail, usuTelf, usuRol FROM usuarios where UsuRol='Colaborador'";
           Statement st= con.createStatement();
       %>
       

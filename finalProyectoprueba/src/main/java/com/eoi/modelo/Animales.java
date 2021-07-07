@@ -8,13 +8,16 @@ public class Animales {
     private String AnimalSexo;
     private int AnimalAlta;
     private String AnimalPath;
+    private String AnimalCiudad;
+    private String AnimalProvincia;
+    private String AnimalEstado;
 
     public Animales() {
         super();
 
     }
     public Animales(String animalNombre, String animalTipo, String animalEdad, int animalId, String animalRaza,
-            String animalSexo, int animalAlta, String animalPath) {
+            String animalSexo, int animalAlta, String animalPath, String AnimalCiudad, String AnimalProvincia, String AnimalEstado) {
         super();
         AnimalNombre = animalNombre;
         AnimalTipo = animalTipo;
@@ -24,6 +27,40 @@ public class Animales {
         AnimalSexo = animalSexo;
         AnimalAlta = animalAlta;
         AnimalPath = animalPath;
+        AnimalCiudad = AnimalCiudad;
+        AnimalProvincia = AnimalProvincia;
+        AnimalEstado = AnimalEstado;
+                
+    }
+    public int getAnimalAlta() {
+        return AnimalAlta;
+    }
+    public void setAnimalAlta(int animalAlta) {
+        AnimalAlta = animalAlta;
+    }
+    public String getAnimalPath() {
+        return AnimalPath;
+    }
+    public void setAnimalPath(String animalPath) {
+        AnimalPath = animalPath;
+    }
+    public String getAnimalCiudad() {
+        return AnimalCiudad;
+    }
+    public void setAnimalCiudad(String animalCiudad) {
+        AnimalCiudad = animalCiudad;
+    }
+    public String getAnimalProvincia() {
+        return AnimalProvincia;
+    }
+    public void setAnimalProvincia(String animalProvincia) {
+        AnimalProvincia = animalProvincia;
+    }
+    public String getAnimalEstado() {
+        return AnimalEstado;
+    }
+    public void setAnimalEstado(String animalEstado) {
+        AnimalEstado = animalEstado;
     }
     public String getAnimalNombre() {
         return AnimalNombre;

@@ -3,6 +3,7 @@ package com.eoi.controlador;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import javax.print.attribute.HashPrintRequestAttributeSet;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -83,8 +84,11 @@ public class Controlador extends HttpServlet {
         String AnimalSexo = request.getParameter("AnimalSexo");
         int AnimalAlta = Integer.parseInt(request.getParameter("AnimalAlta"));
         String AnimalPath = request.getParameter("AnimalPath");
+        String AnimalCiudad = request.getParameter("AnimalCiudad");
+        String AnimalProvincia = request.getParameter("AnimalProvincia");
+        String AnimalEstado = request.getParameter("AnimalEstado");
 
-        Animales ani = new Animales(AnimalNombre, AnimalEdad, AnimalTipo, AnimalId, AnimalRaza, AnimalSexo, AnimalAlta, AnimalPath);
+        Animales ani = new Animales(AnimalNombre, AnimalEdad, AnimalTipo, AnimalId, AnimalRaza, AnimalSexo, AnimalAlta, AnimalPath, AnimalCiudad, AnimalProvincia, AnimalEstado);
         DAO UsuDao = new DAO();
 
         String destino = "index.jsp";

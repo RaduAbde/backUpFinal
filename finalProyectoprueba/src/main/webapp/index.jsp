@@ -42,7 +42,7 @@
               <a class="nav-link" href="Protectoras.html">Protectoras</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="mascotasEnAdopcion.html">Mascotas En Adopcion</a>
+              <a class="nav-link" href="mascotasEnAdopcion.jsp">Mascotas En Adopcion</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="colaboradores.jsp">Colaboradores</a>
@@ -79,7 +79,7 @@
         <input type="password" name="UsuPass" id="pass" placeholder="Contraseña" required>
         <br />
         <input type="submit" value="Login" id="enviar">
-        <a href="DatosUsuario.html" id="registrar" >Registrate</a>
+        <a href="altaUsuario.jsp" id="registrar" >Registrate</a>
         <span id="mensajeError" style=" color: red; position:absolute;top:200px;" ><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span>
       </form>
     </div>

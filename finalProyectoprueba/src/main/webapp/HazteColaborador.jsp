@@ -42,7 +42,7 @@
               <a class="nav-link" href="Protectoras.html">Protectoras</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="mascotasEnAdopcion.html">Mascotas En Adopcion</a>
+              <a class="nav-link" href="mascotasEnAdopcion.jsp">Mascotas En Adopcion</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="colaboradores.jsp">Colaboradores</a>
