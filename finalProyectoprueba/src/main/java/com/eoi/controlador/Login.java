@@ -19,49 +19,44 @@ import com.eoi.modelo.CuentaDAO;
  */
 @WebServlet("/Login")
 public class Login extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
+    public Login() {
+        super();
+        
+    }
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        response.getWriter().append("Served at: ").append(request.getContextPath());
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String mail = request.getParameter("UsuMail");
+        String pass = request.getParameter("UsuPass");
+        
+        CuentaDAO Cdao = new CuentaDAO();
+        //UsuarioDAO udao = new UsuarioDAO();
+        Usuarios usu = null;
+        String pageDest = "index.jsp";
 
-	public Login() {
-		super();
-		
-	}
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		String UsuMail = request.getParameter("UsuMail");
-		String UsuPass = request.getParameter("UsuPass");
-		
-		CuentaDAO Cdao = new CuentaDAO();
-		//UsuarioDAO udao = new UsuarioDAO();
-		Usuarios usu = null;
-		//datos usuarios
-		String pageDest = "/index.jsp";
-
-		try {
-			usu = Cdao.login(UsuMail, UsuPass);
-			// el empleado existe en la base de dato
-			if (usu != null) {
-				pageDest = "perfilUsu.jsp";
-				// Abrimos sesion
-				HttpSession sesion = request.getSession();
-				sesion.setAttribute("UsuNombre", usu.getUsuNombre());
-				sesion.setAttribute("UsuRol", usu.getUsuRol());
-			//Nuevo usario a meter
-			} else {
-				String msgerr = "Usuario y Contraseña incorrectos";
-				request.setAttribute("msgerr", msgerr);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		RequestDispatcher rd = request.getRequestDispatcher(pageDest);
-		rd.forward(request, response);
-		
-	}
+        try {
+            usu = Cdao.login(mail, pass);
+            if (usu != null) {
+                pageDest = "perfilUsu.jsp";
+                HttpSession sesion = request.getSession();
+                sesion.setAttribute("UsuNombre", usu.getUsuNombre());
+                sesion.setAttribute("UsuRol", usu.getUsuRol());
+            } else {
+                String msgerr = "Usuario y Contraseña incorrectos";
+                request.setAttribute("msgerr", msgerr);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        RequestDispatcher rd = request.getRequestDispatcher(pageDest);
+        rd.forward(request, response);
+        
+    }
 
 }

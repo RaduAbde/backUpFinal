@@ -71,16 +71,16 @@
   <h1 class="h1">Acceso a tu cuenta</h1>
   <div id="login">
     <div class="card login-card bg-dark" style="width: 250px; height: 200px;">
-      <form method="post" action="perfilUsu.jsp">
+      <form method="post" action="Login">
         <i id="iconopersona" class="fa fa-user bg-warning"></i>
-        <input type="email" id="nombre" name="UsuMail "class="" placeholder="Nombre de Usuario" required>
+        <input type="email" id="nombre" name="UsuMail" placeholder="Nombre de Usuario" required>
         <br />
         <i id="iconollave" class="fas fa-key bg-warning"></i>
         <input type="password" name="UsuPass" id="pass" placeholder="Contraseña" required>
         <br />
         <input type="submit" value="Login" id="enviar">
         <a href="DatosUsuario.html" id="registrar" >Registrate</a>
-        <span style="color: red"><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span>
+        <span id="mensajeError" style=" color: red; position:absolute;top:200px;" ><%=(request.getAttribute("msgerr") == null) ? "" : request.getAttribute("msgerr") %></span>
       </form>
     </div>
   </div>

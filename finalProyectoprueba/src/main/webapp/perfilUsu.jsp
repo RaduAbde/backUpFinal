@@ -22,26 +22,26 @@
 <%
 
 	Connection con = conexion.getInstance().getConnection();
-	String sql= "SELECT * FROM usuarios";
+	String sql = "SELECT * FROM usuarios";
 	Statement st = con.createStatement();
 	ResultSet rs = st.executeQuery(sql);
 	//session.setString(1,u.getUsuId());
 %>
 
-<h2>Bienvenido <%=session.getAttribute("UsuNombre") %> - <%=session.getAttribute("rol")%></h2>
+<h2>Bienvenido <%=session.getAttribute("UsuNombre") %> - <%=session.getAttribute("UsuRol")%></h2>
 
 <nav>
-		<ul>
+		<ul  style=display:inline;>
 			<%
 			if (session.getAttribute("UsuRol").equals("admin")) {
 			%>
 
-			<li><a href="index.jsp"> Home</a></li>
+			<li  type="button" class="btn btn-warning" style=display:inline;><a  style="text-decoration:none" href="index.jsp"> Home</a></li>
 			<%
 			}
 			%>
-			<li><a href="altaUsuario.jsp"> Nuevo Usuario </a></li>
-			<li><a href="Logout"> Logout</a></li>
+			<li  type="button" class="btn btn-warning" style=display:inline;><a  style="text-decoration:none" href="altaUsuario.jsp"> Nuevo Usuario </a></li>
+			<li  type="button" class="btn btn-warning" style=display:inline;><a  style="text-decoration:none" href="Logout"> Logout</a></li>
 
 		</ul>
 	</nav>
@@ -90,18 +90,16 @@
                 </button>
             </div>
         </nav>
-	<table>
-		<caption>
-			<b>Lista de usuarios</b>
-		</caption>
+        <h5 class="h4" style="position:relative; top:50px;">Lista de Usuarios</h5>
+	<table class="table table-dark" style="position:relative; top:50px;">
 	
 	<tr>
-		<th>UsuId</th>
-		<th>UsuNombre</th>
-		<th>UsuCiudad</th>
-		<th>UsuTelf</th>
-		<th>UsuDNI</th>
-		<th>UsuMail</th>
+		<th scope="col">UsuId</th>
+		<th scope="col">UsuNombre</th>
+		<th scope="col">UsuCiudad</th>
+		<th scope="col">UsuTelf</th>
+		<th scope="col">UsuDNI</th>
+		<th scope="col">UsuMail</th>
 		<% if(session.getAttribute("UsuRol").equals("admin")) { %>
 			
 			<th> Acciones </th>
@@ -114,8 +112,9 @@
             <td><%= rs.getString("UsuNombre") %></td>
             <td><%= rs.getString("UsuCiudad") %></td>
             <td><%= rs.getString("UsuTelf") %></td>
+            <td><%= rs.getString("UsuDNI") %></td>
             <td><%= rs.getString("UsuMail") %></td>
-            <% if(session.getAttribute("rol").equals("admin")) { %>
+            <% if(session.getAttribute("UsuRol").equals("admin")) { %>
             <td><a href="Controlador?opcion=e&UsuId=<%=rs.getString("UsuId") %>"><i class="fa fa-edit" aria-hidden="true"></i></a>  <a href="Controlador?opcion=b&UsuId=<%=rs.getString("UsuId") %>"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
        	<% } %>
         </tr>
